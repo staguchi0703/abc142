@@ -1,6 +1,7 @@
-# at_coder_template
+# at_coder_ABC142
 ## 目的
-VScodeでat_coderのABCに参加するための準備
+ABC142の回答を記載する
+筆者はビギナーであるため、回答は稚拙である
 
 ## 使い方
 1. github上で`templete`をクローンしたリポジトリを作成し、参加コンテストの名前を付ける
