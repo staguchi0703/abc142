@@ -16,6 +16,13 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('A', num_list)
+num = int(input())
+
+cnt_odd = 0
+
+for i in range(1, num + 1):
+    if i % 2 ==1:
+        cnt_odd += 1
+
+print(cnt_odd / num)
 
