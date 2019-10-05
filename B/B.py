@@ -16,6 +16,14 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('B', num_list)
+N, K = [int(item) for item in input().split()]
+h_list = [int(item) for item in input().split()]
+ 
+cnt = 0
+ 
+for hight in h_list:
+    if hight >= K:
+        cnt += 1
+        
+print(cnt)
 

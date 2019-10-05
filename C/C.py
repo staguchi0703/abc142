@@ -16,6 +16,14 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('C', num_list)
-
+num = int(input())
+list = [int(item) for item in input().split()]
+ 
+order = dict(zip(range(1,num+1), list))
+p_order = sorted(order.items(), key=lambda x:x[1])
+ 
+ 
+ 
+for i in [item[0] for item in p_order][:-1]:
+    print(str(i) + ' ', end='')
+print([item[0] for item in p_order][-1])

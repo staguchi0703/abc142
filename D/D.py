@@ -1,4 +1,4 @@
-# %%
+# 
 # VScodeで入力をテキストから読み込んで標準入力に渡す
 import sys
 import os
@@ -14,8 +14,34 @@ sys.stdin=f
 # num_list = [int(item) for item in input().split()]
 # num_list = [input() for _ in range(3)]
 ##################################
-# %%
+# 
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('D',num_list)
+# start 21:14
+a, b = [int(item) for item in input().split()]
+
+# 素因数リスト
+import math
+def factor(num):
+    divisor_list = [1]
+    divisor = 2
+    max_prime = int(math.sqrt(num))
+    while max_prime >= divisor:
+        if num % divisor == 0:
+            divisor_list.append(divisor)
+            num //= divisor
+
+        else:
+            divisor += 1
+    divisor_list.append(num)
+    return divisor_list
+
+# 最大公約数
+def gcd(a, b):
+    while b > 1:
+        a, b = b, a & b
+    return a
+
+cd_list = set(factor(gcd(a, b)))
+
+print(len(cd_list))
 
